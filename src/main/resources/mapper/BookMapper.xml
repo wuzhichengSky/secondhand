@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wzc.bookcontrol.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="com.wzc.bookcontrol.dao.pojo.Book">
+            <id property="bid" column="bid" jdbcType="INTEGER"/>
+            <result property="bookName" column="book_name" jdbcType="VARCHAR"/>
+            <result property="author" column="author" jdbcType="VARCHAR"/>
+            <result property="publishTime" column="publish_time" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="INTEGER"/>
+            <result property="state" column="state" jdbcType="TINYINT"/>
+            <result property="ownerId" column="owner_id" jdbcType="INTEGER"/>
+            <result property="borId" column="bor_id" jdbcType="INTEGER"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bid,book_name,author,
+        publish_time,price,state,
+        owner_id,bor_id,is_delete,
+        create_time,update_time
+    </sql>
+</mapper>
